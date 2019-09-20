@@ -1,0 +1,78 @@
+create database atleta;
+
+use atleta;
+
+create table Atleta (
+	
+idatleta int primary key,
+    
+nome varchar(40),
+    
+modalidade varchar(40),
+    
+qtdmedalhas int
+;
+
+)
+
+select * from atleta;
+
+
+insert into atleta values
+
+	(1, 'Michael Phelps', 'Natação', 28);
+
+
+insert into atleta values
+	
+	(2, 'Larissa Latynina', 'Ginástica artística', 18),
+
+        (3, 'Paavo Nurmi', 'Atletismo', 12),
+    
+    (4, 'Mark Mark Spitz','Natação', 11),
+    
+        (5, 'Carl Lewis', 'Atletismo', 10),
+
+        (6, 'Ole Einar Bjørndalen', 'Biatlo', 13),
+   
+        (7, 'Bjørn Dæhlie', 'Esqui cross-country', 12),
+    
+        (8, 'Birgit Fischer', 'Canoagem', 12),
+    
+    (9, 'Sawao Kato', 'Ginástica artística', 12);
+
+    
+    select nome, qtdmedalhas from atleta;
+
+    select * from atleta where modalidade = 'natação';
+
+    select * from atleta where modalidade = 'Atletismo';
+
+    
+select * from atleta order by modalidade;
+ 
+    select * from atleta order by qtdmedalhas;
+    
+    select * from atleta order by qtdmedalhas desc;
+    
+    select * from atleta where nome like 's%';
+
+    select * from atleta where nome like 'B%';
+
+    select * from atleta where nome like '%O';
+
+    select * from atleta where nome like '%i_';
+
+    
+update atleta set qtdmedalhas = qtdmedalhas + 3 where idatleta = 5;
+
+    update atleta set modalidade = 'natação' where idatleta = 5;
+
+ 
+   delete from atleta where idatleta = '5';
+
+    
+drop table atleta;
+
+    
+select * from atleta;
